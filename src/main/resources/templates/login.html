@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Index</title>
+</head>
+<body>
+<form th:action="@{/login.html}" th:object="${loginForm}" method="post">
+    <p style="color: red" th:if="${error}">Username and/or Password Incorrect</p>
+    <div>
+        <label>
+            <input type="text" name="username">
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="password" name="password">
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="submit" name="Login">
+        </label>
+    </div>
+</form>
+</body>
+</html>
